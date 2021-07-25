@@ -9,8 +9,6 @@
         "statamic-cache"
     ],
     "require": {
-        "php": "^7.0|^8.0",
-        "laravel/framework": "^6.0|^7.0|^8.0",
         "statamic/cms": "^3.1"
     },
     "require-dev": {

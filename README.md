@@ -59,6 +59,7 @@ Then update the `static_cache` strategy at the top of the configuration to:
 ```
 
 It is important to note, that if strategies are omitted or are empty, then the `multi-cacher` strategy will default to `null`.
+The `null` strategy will always be available for selection, so you don't need to add it to your strategies section.
 
 If you don't override the `CacheSelector` which is `\Michaelr0\StatamicMultiCacher\CacheSelector` then the first strategy will always be used, In the above example this would be `half`.
 
@@ -92,7 +93,6 @@ And then updating your `static_cache` configuration to be as follows:
     'driver' => 'multi-cacher',
     'selector' => \App\Cachers\MyMultiCacher::class,
     'strategies' => [
-        'null',
         'half',
     ],
 ],

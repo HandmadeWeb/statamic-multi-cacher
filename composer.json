@@ -1,0 +1,19 @@
+{
+    "name": "michaelr0/statamic-multi-cacher",
+    "autoload": {
+        "psr-4": {
+            "Michaelr0\\StatamicMultiCacher\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Multi Cacher",
+            "description": "Statamic Multi Cacher addon"
+        },
+        "laravel": {
+            "providers": [
+                "Michaelr0\\StatamicMultiCacher\\ServiceProvider"
+            ]
+        }
+    }
+}

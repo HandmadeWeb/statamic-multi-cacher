@@ -6,9 +6,9 @@ Statamic Multi Cacher is a caching strategy "redirector" of sorts, it can be use
 An example of this could be to bypass/disable the cache for super admins and serve the `half` strategy to everyone else.
 
 # Requirements
-* PHP 8.0 or higher
+* PHP 7.0 or higher
 * Statamic 3.1 or higher
-* Laravel 8.0 or higher
+* Laravel 6.0 or higher
 
 # Installation
 

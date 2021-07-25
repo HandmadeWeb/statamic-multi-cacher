@@ -40,7 +40,12 @@ class MultiCacher extends AbstractCacher
 
         $cachers = [];
 
-        foreach ($this->config('strategies', ['null']) as $driver) {
+        $strategies = $this->config('strategies', []);
+        if (empty($strategies)) {
+            $strategies[] = 'null';
+        }
+
+        foreach ($strategies as $driver) {
             $cachers[$driver] = app(StaticCacheManager::class)->driver($driver);
         }
 

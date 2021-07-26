@@ -15,6 +15,7 @@ jobs:
       matrix:
         php: [7.3, 7.4, 8.0]
         laravel: [6.*, 7.*, 8.*]
+        statamic: [3.1.*]
         dependency-version: [prefer-lowest, prefer-stable]
         os: [ubuntu-20.04]
         include:

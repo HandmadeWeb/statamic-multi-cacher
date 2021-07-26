@@ -31,7 +31,7 @@ jobs:
             dependency-version: prefer-lowest
             additional-deps: '"mockery/mockery:>=1.3.3"'
 
-     name: P${{ matrix.php }} - S${{ matrix.statamic }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }} - ubuntu-latest
+    name: P${{ matrix.php }} - S${{ matrix.statamic }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }} - ubuntu-latest
 
     steps:
       - name: Checkout code

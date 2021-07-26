@@ -102,6 +102,10 @@ And then updating your `static_cache` configuration to be as follows:
 ],
 ```
 
+## Changelog
+
+Please see [CHANGELOG](https://github.com/michaelr0/statamic-multi-cacher/CHANGELOG.md) for more information what has changed recently.
+
 ## Contributing
 
 Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/CONTRIBUTING.md) for details.

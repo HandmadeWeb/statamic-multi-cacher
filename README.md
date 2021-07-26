@@ -104,13 +104,13 @@ And then updating your `static_cache` configuration to be as follows:
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/CONTRIBUTING.md) for details.
 
 ## Credits
 
 - [Michael Rook](https://github.com/michaelr0)
-- [All Contributors](../../contributors)
+- [All Contributors](https://github.com/michaelr0/statamic-multi-cacher/graphs/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/michaelr0/statamic-multi-cacher/LICENSE.md) for more information.

@@ -104,11 +104,11 @@ And then updating your `static_cache` configuration to be as follows:
 
 ## Changelog
 
-Please see [CHANGELOG](https://github.com/michaelr0/statamic-multi-cacher/CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/michaelr0/statamic-multi-cacher/blob/main/CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/blob/main/CONTRIBUTING.md) for details.
 
 ## Credits
 
@@ -117,4 +117,4 @@ Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/CON
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/michaelr0/statamic-multi-cacher/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/michaelr0/statamic-multi-cacher/blob/main/LICENSE.md) for more information.

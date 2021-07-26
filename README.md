@@ -1,6 +1,8 @@
-![Statamic v3.1](https://img.shields.io/badge/Statamic-3.1+-FF269E?style=flat-square)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/michaelr0/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/michaelr0/statamic-multi-cacher)
+[![Total Downloads](https://img.shields.io/packagist/dt/michaelr0/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/michaelr0/statamic-multi-cacher)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
 [![Run Tests](https://github.com/michaelr0/statamic-multi-cacher/actions/workflows/tests.yml/badge.svg)](https://github.com/michaelr0/statamic-multi-cacher/actions/workflows/tests.yml)
+![Statamic v3.1](https://img.shields.io/badge/Statamic-3.1+-FF269E?style=flat-square)
 
 Statamic Multi Cacher is a caching strategy "redirector" of sorts, it can be used to provide different caching strategies based on your own logic.
 

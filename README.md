@@ -8,10 +8,13 @@ Statamic Multi Cacher is a caching strategy "redirector" of sorts, it can be use
 
 An example of this could be to bypass/disable the cache for super admins and serve the `half` strategy to everyone else.
 
-# Requirements
+## THIS IS A BETA
+Please be aware that it is not recommended to use this in production just yet.
+
+## Requirements
 * Statamic 3.1 or higher
 
-# Installation
+## Installation
 
 You can install the package via composer:
 
@@ -19,7 +22,7 @@ You can install the package via composer:
 composer require michaelr0/statamic-multi-cacher
 ```
 
-# Usage
+## Usage
 
 First add the strategy to your `static_cache` config
 

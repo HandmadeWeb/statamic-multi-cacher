@@ -1,7 +1,7 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/michaelr0/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/michaelr0/statamic-multi-cacher)
-[![Total Downloads](https://img.shields.io/packagist/dt/michaelr0/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/michaelr0/statamic-multi-cacher)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/handmadeweb/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/handmadeweb/statamic-multi-cacher)
+[![Total Downloads](https://img.shields.io/packagist/dt/handmadeweb/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/handmadeweb/statamic-multi-cacher)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
-[![Run Tests](https://github.com/michaelr0/statamic-multi-cacher/actions/workflows/tests.yml/badge.svg)](https://github.com/michaelr0/statamic-multi-cacher/actions/workflows/tests.yml)
+[![Run Tests](https://github.com/handmadeweb/statamic-multi-cacher/actions/workflows/tests.yml/badge.svg)](https://github.com/handmadeweb/statamic-multi-cacher/actions/workflows/tests.yml)
 ![Statamic v3.1](https://img.shields.io/badge/Statamic-3.1+-FF269E?style=flat-square)
 
 Statamic Multi Cacher is a caching strategy "redirector" of sorts, it can be used to provide different caching strategies based on your own logic.
@@ -19,7 +19,7 @@ Please be aware that it is not recommended to use this in production just yet.
 You can install the package via composer:
 
 ```bash
-composer require michaelr0/statamic-multi-cacher
+composer require handmadeweb/statamic-multi-cacher
 ```
 
 ## Usage
@@ -65,7 +65,7 @@ Then update the `static_cache` strategy at the top of the configuration to:
 It is important to note, that if strategies are omitted or are empty, then the `multi-cacher` strategy will default to `null`.
 The `null` strategy will always be available for selection, so you don't need to add it to your strategies section.
 
-If you don't override the `CacheSelector` which is `\Michaelr0\StatamicMultiCacher\CacheSelector` then the first strategy will always be used, In the above example this would be `half`.
+If you don't override the `CacheSelector` which is `\HandmadeWeb\StatamicMultiCacher\CacheSelector` then the first strategy will always be used, In the above example this would be `half`.
 
 Overriding can be done by extending the `CacheSelector` class like so:
 ```php
@@ -74,7 +74,7 @@ Overriding can be done by extending the `CacheSelector` class like so:
 namespace App\Cachers;
 
 use Illuminate\Support\Facades\Auth;
-use Michaelr0\StatamicMultiCacher\CacheSelector;
+use HandmadeWeb\StatamicMultiCacher\CacheSelector;
 
 class MyMultiCacher extends CacheSelector
 {
@@ -104,17 +104,18 @@ And then updating your `static_cache` configuration to be as follows:
 
 ## Changelog
 
-Please see [CHANGELOG](https://github.com/michaelr0/statamic-multi-cacher/blob/main/CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/handmadeweb/statamic-multi-cacher/blob/main/CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/handmadeweb/statamic-multi-cacher/blob/main/CONTRIBUTING.md) for details.
 
 ## Credits
 
+- [Handmade Web & Design](https://github.com/handmadeweb)
 - [Michael Rook](https://github.com/michaelr0)
-- [All Contributors](https://github.com/michaelr0/statamic-multi-cacher/graphs/contributors)
+- [All Contributors](https://github.com/handmadeweb/statamic-multi-cacher/graphs/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/michaelr0/statamic-multi-cacher/blob/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/handmadeweb/statamic-multi-cacher/blob/main/LICENSE.md) for more information.

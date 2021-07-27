@@ -1,8 +1,8 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher\Tests;
+namespace HandmadeWeb\StatamicMultiCacher\Tests;
 
-use Michaelr0\StatamicMultiCacher\ServiceProvider;
+use HandmadeWeb\StatamicMultiCacher\ServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Statamic\Extend\Manifest;
 use Statamic\Providers\StatamicServiceProvider;
@@ -41,9 +41,9 @@ class TestCase extends OrchestraTestCase
         parent::getEnvironmentSetUp($app);
 
         $app->make(Manifest::class)->manifest = [
-            'michaelr0/statamic-multi-cacher' => [
-                'id' => 'michaelr0/statamic-multi-cacher',
-                'namespace' => 'Michaelr0\\StatamicMultiCacher\\',
+            'handmadeweb/statamic-multi-cacher' => [
+                'id' => 'handmadeweb/statamic-multi-cacher',
+                'namespace' => 'HandmadeWeb\\StatamicMultiCacher\\',
             ],
         ];
     }

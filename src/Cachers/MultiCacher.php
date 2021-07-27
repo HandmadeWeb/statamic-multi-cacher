@@ -1,10 +1,10 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher\Cachers;
+namespace HandmadeWeb\StatamicMultiCacher\Cachers;
 
+use HandmadeWeb\StatamicMultiCacher\CacheSelector;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Http\Request;
-use Michaelr0\StatamicMultiCacher\CacheSelector;
 use Statamic\StaticCaching\Cachers\AbstractCacher;
 use Statamic\StaticCaching\StaticCacheManager;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +27,7 @@ class MultiCacher extends AbstractCacher
     protected $cachers;
 
     /**
-     * @var \Michaelr0\StatamicMultiCacher\CacheSelector
+     * @var \HandmadeWeb\StatamicMultiCacher\CacheSelector
      */
     protected $cacheSelector;
 
@@ -75,7 +75,7 @@ class MultiCacher extends AbstractCacher
     }
 
     /**
-     * @return \Michaelr0\StatamicMultiCacher\CacheSelector
+     * @return \HandmadeWeb\StatamicMultiCacher\CacheSelector
      */
     public function cacheSelector()
     {

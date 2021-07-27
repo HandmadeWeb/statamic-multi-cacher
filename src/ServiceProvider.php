@@ -1,9 +1,9 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher;
+namespace HandmadeWeb\StatamicMultiCacher;
 
+use HandmadeWeb\StatamicMultiCacher\Cachers\MultiCacher;
 use Illuminate\Cache\Repository as CacheRepository;
-use Michaelr0\StatamicMultiCacher\Cachers\MultiCacher;
 use Statamic\Providers\AddonServiceProvider;
 use Statamic\StaticCaching\StaticCacheManager;
 

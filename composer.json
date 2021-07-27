@@ -1,5 +1,5 @@
 {
-    "name": "michaelr0/statamic-multi-cacher",
+    "name": "handmadeweb/statamic-multi-cacher",
     "license": "MIT",
     "description": "",
     "keywords": [
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Michaelr0\\StatamicMultiCacher\\": "src"
+            "HandmadeWeb\\StatamicMultiCacher\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Michaelr0\\StatamicMultiCacher\\Tests\\": "tests"
+            "HandmadeWeb\\StatamicMultiCacher\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -36,7 +36,7 @@
         },
         "laravel": {
             "providers": [
-                "Michaelr0\\StatamicMultiCacher\\ServiceProvider"
+                "HandmadeWeb\\StatamicMultiCacher\\ServiceProvider"
             ]
         }
     }

@@ -1,18 +1,18 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher;
+namespace HandmadeWeb\StatamicMultiCacher;
 
-use Michaelr0\StatamicMultiCacher\Cachers\MultiCacher;
+use HandmadeWeb\StatamicMultiCacher\Cachers\MultiCacher;
 
 class CacheSelector
 {
     /**
-     * @var \Michaelr0\StatamicMultiCacher\Cachers\MultiCacher
+     * @var \HandmadeWeb\StatamicMultiCacher\Cachers\MultiCacher
      */
     protected $multiCacher;
 
     /**
-     * @param \Michaelr0\StatamicMultiCacher\Cachers\MultiCacher $multiCacher
+     * @param \HandmadeWeb\StatamicMultiCacher\Cachers\MultiCacher $multiCacher
      */
     public function __construct(MultiCacher $multiCacher)
     {
@@ -20,7 +20,7 @@ class CacheSelector
     }
 
     /**
-     * @return \Michaelr0\StatamicMultiCacher\Cachers\MultiCacher
+     * @return \HandmadeWeb\StatamicMultiCacher\Cachers\MultiCacher
      */
     public function multiCacher()
     {

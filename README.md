@@ -14,7 +14,7 @@ Statamic Multi Cacher is a caching strategy that allows you to specify multiple 
 You can install the package via composer:
 
 ```bash
-composer require michaelr0/statamic-multi-cacher
+composer require michaelr0/statamic-multi-cacher:dev-run-everything
 ```
 
 ## Usage

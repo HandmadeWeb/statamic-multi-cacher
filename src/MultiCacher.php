@@ -1,13 +1,11 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher\Cachers;
+namespace Michaelr0\StatamicMultiCacher;
 
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Http\Request;
-use Michaelr0\StatamicMultiCacher\CacheSelector;
 use Statamic\StaticCaching\Cachers\AbstractCacher;
 use Statamic\StaticCaching\StaticCacheManager;
-use Symfony\Component\HttpFoundation\Response;
 
 class MultiCacher extends AbstractCacher
 {
@@ -27,11 +25,6 @@ class MultiCacher extends AbstractCacher
     protected $cachers;
 
     /**
-     * @var \Michaelr0\StatamicMultiCacher\CacheSelector
-     */
-    protected $cacheSelector;
-
-    /**
      * @param \Illuminate\Contracts\Cache\Repository $cache
      */
     public function __construct(Repository $cache, $config)
@@ -40,10 +33,13 @@ class MultiCacher extends AbstractCacher
 
         $cachers = [];
 
-        $strategies = $this->config('strategies', []);
+        $strategies = collect($this->config('strategies', []));
 
-        // Always add the null strategy.
-        $strategies[] = 'null';
+        if ($strategies->isEmpty()) {
+            $strategies->push('null');
+        }
+
+        $strategies = $strategies->unique()->toArray();
 
         foreach ($strategies as $driver) {
             $cachers[$driver] = app(StaticCacheManager::class)->driver($driver);
@@ -51,11 +47,7 @@ class MultiCacher extends AbstractCacher
 
         $this->cachers = collect($cachers);
 
-        $cacheSelector = $this->config('selector', CacheSelector::class);
-
-        $this->cacheSelector = ($cacheSelector instanceof CacheSelector) ? new $cacheSelector($this) : new CacheSelector($this);
-
-        $this->cacher = $this->cacheSelector()->selectCacher();
+        $this->cacher = $this->cachers()->first();
     }
 
     /**
@@ -72,14 +64,6 @@ class MultiCacher extends AbstractCacher
     public function cachers()
     {
         return $this->cachers;
-    }
-
-    /**
-     * @return \Michaelr0\StatamicMultiCacher\CacheSelector
-     */
-    public function cacheSelector()
-    {
-        return $this->cacheSelector;
     }
 
     // AbstractCacher
@@ -152,7 +136,7 @@ class MultiCacher extends AbstractCacher
      */
     public function cacheUrl($key, $url)
     {
-        $this->cacher()->cacheUrl($key, $url);
+        $this->cachers()->each->cacheUrl($key, $url);
     }
 
     /**
@@ -187,7 +171,7 @@ class MultiCacher extends AbstractCacher
      */
     public function cachePage(Request $request, $content)
     {
-        return $this->cacher()->cachePage($request, $content);
+        return $this->cachers()->map->cachePage($request, $content)->first();
     }
 
     /**
@@ -253,43 +237,5 @@ class MultiCacher extends AbstractCacher
     public function getUrls($domain = null)
     {
         return $this->cacher()->getUrls($domain);
-    }
-
-    // Bypass
-
-    /**
-     * Check if the cache can be bypassed.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return bool
-     */
-    public function canBeBypassed(Request $request)
-    {
-        return method_exists($this->cacher(), 'canBeBypassed') ? $this->cacher()->canBeBypassed($request) : false;
-    }
-
-    /**
-     * Check if the cache should be bypassed.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return bool
-     */
-    public function shouldBeBypassed(Request $request)
-    {
-        return method_exists($this->cacher(), 'shouldBeBypassed') ? $this->cacher()->shouldBeBypassed($request) : false;
-    }
-
-    // Response
-
-    /**
-     * Return the response from the cache, or dont.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param Response $response
-     * @return Response
-     */
-    public function response(Request $request, Response $response)
-    {
-        return method_exists($this->cacher(), 'response') ? $this->cacher()->response($request, $response) : $response;
     }
 }

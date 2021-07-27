@@ -3,7 +3,7 @@
 namespace Michaelr0\StatamicMultiCacher;
 
 use Illuminate\Cache\Repository as CacheRepository;
-use Michaelr0\StatamicMultiCacher\Cachers\MultiCacher;
+use Michaelr0\StatamicMultiCacher\MultiCacher;
 use Statamic\Providers\AddonServiceProvider;
 use Statamic\StaticCaching\StaticCacheManager;
 

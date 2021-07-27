@@ -3,7 +3,7 @@
 namespace Michaelr0\StatamicMultiCacher\Tests\StaticCaching;
 
 use Illuminate\Cache\Repository;
-use Michaelr0\StatamicMultiCacher\Cachers\MultiCacher;
+use Michaelr0\StatamicMultiCacher\MultiCacher;
 use Michaelr0\StatamicMultiCacher\Tests\TestCase;
 use Statamic\StaticCaching\Cachers\ApplicationCacher;
 use Statamic\StaticCaching\Cachers\FileCacher;
@@ -64,6 +64,7 @@ class MultiCacherTest extends TestCase
     {
         $multiCacher = $this->multiCacher([
             'strategies' => [
+                'null',
                 'half',
                 'full',
             ],

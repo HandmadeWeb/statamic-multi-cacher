@@ -1,10 +1,10 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher\Tests\StaticCaching;
+namespace HandmadeWeb\StatamicMultiCacher\Tests\StaticCaching;
 
+use HandmadeWeb\StatamicMultiCacher\MultiCacher;
+use HandmadeWeb\StatamicMultiCacher\Tests\TestCase;
 use Illuminate\Cache\Repository;
-use Michaelr0\StatamicMultiCacher\MultiCacher;
-use Michaelr0\StatamicMultiCacher\Tests\TestCase;
 use Statamic\StaticCaching\Cachers\ApplicationCacher;
 use Statamic\StaticCaching\Cachers\FileCacher;
 use Statamic\StaticCaching\Cachers\NullCacher;

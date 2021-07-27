@@ -1,6 +1,6 @@
 <?php
 
-namespace Michaelr0\StatamicMultiCacher;
+namespace HandmadeWeb\StatamicMultiCacher;
 
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Http\Request;

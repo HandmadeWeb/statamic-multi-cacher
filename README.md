@@ -1,7 +1,7 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/michaelr0/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/michaelr0/statamic-multi-cacher)
-[![Total Downloads](https://img.shields.io/packagist/dt/michaelr0/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/michaelr0/statamic-multi-cacher)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/handmadeweb/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/handmadeweb/statamic-multi-cacher)
+[![Total Downloads](https://img.shields.io/packagist/dt/handmadeweb/statamic-multi-cacher.svg?style=flat-square)](https://packagist.org/packages/handmadeweb/statamic-multi-cacher)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
-[![Run Tests](https://github.com/michaelr0/statamic-multi-cacher/actions/workflows/tests.yml/badge.svg)](https://github.com/michaelr0/statamic-multi-cacher/actions/workflows/tests.yml)
+[![Run Tests](https://github.com/handmadeweb/statamic-multi-cacher/actions/workflows/tests.yml/badge.svg)](https://github.com/handmadeweb/statamic-multi-cacher/actions/workflows/tests.yml)
 ![Statamic v3.1](https://img.shields.io/badge/Statamic-3.1+-FF269E?style=flat-square)
 
 Statamic Multi Cacher is a caching strategy that allows you to specify multiple caching strategies.
@@ -14,7 +14,7 @@ Statamic Multi Cacher is a caching strategy that allows you to specify multiple 
 You can install the package via composer:
 
 ```bash
-composer require michaelr0/statamic-multi-cacher:dev-run-everything
+composer require handmadeweb/statamic-multi-cacher:dev-run-everything
 ```
 
 ## Usage
@@ -94,17 +94,18 @@ And finally update the `static_cache` strategy at the top of the configuration t
 
 ## Changelog
 
-Please see [CHANGELOG](https://github.com/michaelr0/statamic-multi-cacher/blob/main/CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/handmadeweb/statamic-multi-cacher/blob/main/CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/michaelr0/statamic-multi-cacher/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/handmadeweb/statamic-multi-cacher/blob/main/CONTRIBUTING.md) for details.
 
 ## Credits
 
+- [Handmade Web & Design](https://github.com/handmadeweb)
 - [Michael Rook](https://github.com/michaelr0)
-- [All Contributors](https://github.com/michaelr0/statamic-multi-cacher/graphs/contributors)
+- [All Contributors](https://github.com/handmadeweb/statamic-multi-cacher/graphs/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/michaelr0/statamic-multi-cacher/blob/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/handmadeweb/statamic-multi-cacher/blob/main/LICENSE.md) for more information.
